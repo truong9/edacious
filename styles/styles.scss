@@ -1,0 +1,82 @@
+@import "../partials/setup";
+@import "../partials/searchbox";
+@import "../partials/grid";
+
+body{
+	background: linear-gradient(rgba(169, 169, 169, 0.35), rgba(169, 169, 169, 0.2)), url(../assets/KNIFE.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: repeat-y;
+	font-size: 16px;
+	font-family: 'Questrial', sans-serif;
+}
+
+.wrapper{
+	max-width: 1100px;
+	margin: 0 auto;
+	height: 100vh;
+}
+
+header{
+	margin-top: 1%;
+	display: flex;
+	justify-content: space-between;
+	.logo{
+		height: 5.5vh;
+		img{
+			height: 100%;
+		}
+	}
+	div:last-child{
+		width: 65%;
+		align-self: center;
+
+	}
+}
+
+footer{
+	color: white;
+	font-size: 0.6rem;
+	position: absolute;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+}
+
+
+@media only screen and (max-width: 600px){
+	
+	body{
+		overflow: auto;
+		height: auto;
+	}
+
+	header{
+		margin: 0;
+		.logo{
+			margin: 5% 0 0 3%;
+			width: 0;
+		}
+		div:last-child .searchbox{
+			margin: 4% 3% 0 0;
+		}
+		.searchbox-open{
+			width: 98vw;
+		}
+	}
+
+	.grid .grid-item{
+		height: 150px;
+		width: 100%;
+		h2{
+			font-size: 0.9rem;
+		}
+	}
+
+	.grid .grid-item--large{
+		height: 300px;
+	}
+
+
+}
